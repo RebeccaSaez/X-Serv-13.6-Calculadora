@@ -11,7 +11,6 @@ num1 = sys.argv[1]
 operand = sys.argv[2]
 num2 = sys.argv[3]
 
-
 def sum(num1, num2):
     return float(num1) + float(num2)
 
@@ -27,7 +26,6 @@ def mult(num1, num2):
 def div(num1, num2):
     return float(num1) / float(num2)
 
-
 if __name__ == "__main__":
     try:
         if operand == "+":
@@ -40,7 +38,8 @@ if __name__ == "__main__":
             print str(div(num1, num2))
         else:
             print "Operations available: + - x /"
+            sys.exit()
     except ValueError:
-            print "Please, enter two numbers"
+        print "Please, enter two numbers"
     except ZeroDivisionError:
-            print "Error: divide by zero"
+        print "Error: divide by zero"
